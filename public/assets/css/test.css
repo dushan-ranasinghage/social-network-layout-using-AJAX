@@ -1,9 +1,8 @@
-h1{
-  color: blueviolet;  
-}
-
 /* NAVBAR FIXED TOP  */
 .navbar {
     position: fixed;
     width: 100%;
+
+    /* Body text goes over the top of fixed nav bar to avoid this use higher z-index*/
+    z-index: 500; 
 }
