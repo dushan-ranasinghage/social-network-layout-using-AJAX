@@ -1,3 +1,9 @@
 h1{
   color: blueviolet;  
 }
+
+/* NAVBAR FIXED TOP  */
+.navbar {
+    position: fixed;
+    width: 100%;
+}
