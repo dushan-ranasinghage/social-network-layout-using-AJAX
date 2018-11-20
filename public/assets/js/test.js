@@ -1,4 +1,5 @@
 console.log("CONSOLE WORKS FINE!")
+
 // $(document).ready(function(){
 //     $("button").click(function(){
 //         $.get("https://jsonplaceholder.typicode.com/posts", function(data, status){
@@ -13,10 +14,11 @@ console.log("CONSOLE WORKS FINE!")
 //     });
 // });
 
-// FETCH DATA TO THE DOM USING API
 
+
+// FETCH DATA TO THE DOM USING API
 $(document).ready(function(){
-    $("button").click(function(){
+    $("#search-topics").click(function(){
       var xhttp = new XMLHttpRequest();
       xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
       xhttp.send();
@@ -40,3 +42,36 @@ $(document).ready(function(){
 
   });
 });
+
+
+$(function(){
+  $("#search").keypress(function(){
+      // var search = this.value;
+      // console.log("Search Value",search);
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+      xhttp.send();
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(xhttp.responseText);
+            var posts = response;
+            console.log(posts);
+            var output = '';
+            for(var i = 0;i < 5;i++){ 
+                if(posts[i].title=this.value){
+                  output += '<li  class="list-group-item d-flex justify-content-between align-items-center">'+posts[i].title+'</li>';
+                } else{
+                  output += '';
+                }
+            }
+            document.getElementById('posts').innerHTML = output;
+          } 
+      };
+
+  });
+});
+
+// $('.chatinput').keyup(function(event) {
+//   newText = event.target.value;
+//   $('.printchatbox').text(newText);
+// });

@@ -6,3 +6,8 @@
     /* Body text goes over the top of fixed nav bar to avoid this use higher z-index*/
     z-index: 500; 
 }
+
+/* LIST COLOR CHANGE */
+.list-group-item {
+    background-color: #ededed;
+}
