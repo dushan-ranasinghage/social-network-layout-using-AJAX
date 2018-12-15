@@ -2,6 +2,7 @@
   --main-bg-color: #e6ecf0; 
   --white-color:#fff;
   --box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 1px -1px rgba(0, 0, 0, 0.12);
+  --small-transform: scale(0.8,0.8);;
 }
 
 /* NAVBAR FIXED TOP  */
@@ -17,6 +18,15 @@ html,body {
     box-shadow: var(--box-shadow)
 }
 
+.small{
+    transform: var(--small-transform);
+}
+
+.margin-text-center{
+    margin: auto;
+    text-align: center;
+}
+
 .header {
     position: fixed;
     width: 100%;
@@ -24,6 +34,8 @@ html,body {
     background: #fff;
     /* Body text goes over the top of fixed nav bar to avoid this use higher z-index*/
     z-index: 500; 
+    height: 38px;
+    max-height: 38px;
 }
 
 a {
