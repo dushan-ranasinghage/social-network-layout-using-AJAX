@@ -1,11 +1,19 @@
 /* NAVBAR FIXED TOP  */
-.navbar {
+.header {
     position: fixed;
     width: 100%;
-
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 1px -1px rgba(0, 0, 0, 0.12);
+    background: #fff;
     /* Body text goes over the top of fixed nav bar to avoid this use higher z-index*/
     z-index: 500; 
+
 }
+
+    
+a {
+    color: #000;
+}
+
 
 /* LIST COLOR CHANGE */
 .list-group-item {
