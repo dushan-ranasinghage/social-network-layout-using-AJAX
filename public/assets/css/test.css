@@ -8,7 +8,11 @@
 /* NAVBAR FIXED TOP  */
 html,body {
     background-color: var(--main-bg-color);
+    min-height: -webkit-fill-available;
 }
+html {
+    scroll-behavior: smooth;
+  }
 
 .white-bg{
     background-color: var(--white-color);
@@ -29,6 +33,7 @@ html,body {
 
 .header {
     position: fixed;
+    top: 0px;
     width: 100%;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 1px -1px rgba(0, 0, 0, 0.12);
     background: #fff;
@@ -47,3 +52,74 @@ a {
     background-color: #ededed;
 }
 
+/* changed user profile padding */
+.list-group-item {
+    padding: 0.3rem 1.25rem;
+}
+
+/* Loader */
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    border-radius: 10px;
+    width: 8px;
+    background: #000;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 12px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 29px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 45px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 6px;
+      height: 51px;
+    }
+    50%, 100% {
+      top: 19px;
+      height: 26px;
+    }
+  }
+  
+
+/* Scroll Bar style  */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+background: rgba(0,0,0,0.1);
+border: 1px solid #ccc;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+background: linear-gradient(left, #fff, #e4e4e4);
+border: 1px solid #aaa;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}
+/* END Scroll Bar style  */
